@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="description de la page">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://kit.fontawesome.com/e4d38b2105.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="description de la page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://kit.fontawesome.com/e4d38b2105.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Reservia - Réservation en ligne</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="main">
+      <header class="header">
+        <div class="header">
+          <p>
+            <img src="Pictures\logo\Reservia.svg" alt="Logo site Reservia" />
+          </p>
+          <ul>
+            <div class="list_Header">
+              <li>Hébergement</li>
+              <li>Activités</li>
+              <li>S'inscrire</li>
+            </div>
+          </ul>
+        </div>
+      </header>
+      <section class="section1">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+        <form method="post" action="">
+          <label for ="ville"><i class="fas fa-map-marker-alt"></i></label>
+          <input
+            type="text"
+            name="ville"
+            id="ville"
+            value="Marseille, France"
+          />
+          <input type="submit" value="Rechercher" />
+        </form>
+        <div class="filtres">
+          <form method="POST" action="">
+            <p>Filtres</p>
+<div class="bouton">
+    <div class="bt_eco">
+        <label><i class="fas fa-money-bill-wave"></i></label>
+        <input type="button" value="Economique">
+    </div>
+    <div class="bt_familial">
+        <label><i class="fas fa-child"></i></label>
+        <input type="button" value="Familial">
+    </div>
+    <div class="bt_romantique">
+        <label><i class="fas fa-heart"></i></label>
+        <input type="button" value="Romantique">
+</div>
+<div class="bt_romantique">
+        <label><i class="fas fa-heart"></i></label>
+        <input type="button" value="Romantique">
+</div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
