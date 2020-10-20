@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("Font/Font_Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 1200px;
+  margin: auto;
+  font-family: "Raleway";
+}
+@media all and (max-width: 1200px) {
+  body {
+    width: auto;
+  }
+}
+h1 {
+  font-size: 1.4em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1em;
+  color: black;
+}
+p {
+  font-size: 0.8em;
+}
+li {
+  font-size: 0.9em;
+}
+a {
+  text-decoration: none;
+}
+header a {
+  color: #0065fc;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+  margin-top: 20px;
+}
+header li {
+  margin-left: 60px;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+}
+.section1 h1 + p {
+  margin-top: -10px;
+}
+.form_recherche {
+  margin-top: 10px;
+}
+#submit {
+  border: 13px solid #0065fc;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #0065fc;
+  color: white;
+  position: relative;
+  left: -6px;
+  top: -2px;
+}
+#ville {
+  width: 175px;
+  height: 41px;
+  border-style: none;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  padding-left: 10px;
+  position: relative;
+  left: -3px;
+  top: -2px;
+  font-weight: bold;
+}
+.fa-map-marker-alt {
+  border: 15px solid #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #f2f2f2;
+}
+.filtres {
+  margin-top: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+.filtres p {
+  font-weight: bold;
+  font-size: 1em;
+}
+.bouton {
+  margin-top: 10px;
+  display: flex;
+}
+.bouton i {
+  border: 12px solid #deebff;
+  border-radius: 20px;
+  background-color: #deebff;
+  color: #0065fc;
+  position: relative;
+  left: 20px;
+}
+.bouton input {
+  width: 200px;
+  height: 41px;
+  margin-left: 5px;
+  border: 2.5px solid #f2f2f2;
+  border-left-style: none;
+  border-radius: 0px 20px 20px 0px;
+  background-color: transparent;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: -1px;
+}
+.bt_eco {
+  display: flex;
+  width: 180px;
+}
+.bt_familial {
+  display: flex;
+  width: 150px;
+}
+.bt_romantique {
+  display: flex;
+  width: 180px;
+}
+.bt_animaux {
+  display: flex;
+  width: 220px;
+}
+.fa-child {
+  width: 18px;
+  text-align: center;
+}
+.section2_3 {
+  width: 1200px;
+  display: flex;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  border: solid 2px blue;
+}
+.section2 img {
+  max-width: 15%;
+}
+.hebergements {
+  display: flex;
+  flex-wrap: wrap;
+  width: 730px;
+  height: 270px;
+  justify-content: space-between;
+  border: solid 2px blue;
+}
+.section3 {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  margin-left: auto;
+  border: solid 2px orange;
+}
+.section3 img {
+  max-width: 5%;
+}
+.titre_icone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section4 img {
+  max-width: 25%;
+}
+.activités {
+  display: flex;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+footer a {
+  color: black;
+}
+footer h2 {
+  font-size: 0.9em;
+}
+footer ul {
+  list-style-type: none;
+  width: 200px;
+}
+footer ul li {
+  margin-left: -41px;
+  margin-top: 15px;
+}
