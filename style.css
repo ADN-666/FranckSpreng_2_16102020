@@ -14,6 +14,9 @@ body {
     width: auto;
   }
 }
+input::placeholder {
+  color: black;
+}
 h1 {
   font-size: 1.4em;
 }
@@ -48,15 +51,15 @@ header ul {
 header li {
   margin-left: 60px;
 }
-.section1 {
+.search {
   display: flex;
   flex-direction: column;
   width: 850px;
 }
-.section1 h1 + p {
+.search h1 + p {
   margin-top: -10px;
 }
-.form_recherche {
+.form_search {
   margin-top: 10px;
 }
 #submit {
@@ -72,8 +75,8 @@ header li {
   width: 175px;
   height: 41px;
   border-style: none;
-  border-top: 1px solid #f2f2f2;
-  border-bottom: 1px solid #f2f2f2;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
   padding-left: 10px;
   position: relative;
   left: -3px;
@@ -85,13 +88,13 @@ header li {
   border-radius: 15px 0px 0px 15px;
   background-color: #f2f2f2;
 }
-.filtres {
+.filters {
   margin-top: 15px;
   display: flex;
   justify-content: left;
   align-items: baseline;
 }
-.filtres p {
+.filters p {
   font-weight: bold;
   font-size: 1em;
 }
@@ -140,58 +143,181 @@ header li {
   width: 18px;
   text-align: center;
 }
-.section2_3 {
+.info {
+  width: auto;
+  margin-top: 10px;
+}
+.info p {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.info i {
+  width: 16px;
+  height: 17px;
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #0065fc;
+}
+.section_lodging {
   width: 1200px;
   display: flex;
+  justify-content: space-between;
 }
-.section2 {
+
+.lodging {
   display: flex;
   flex-direction: column;
-  width: 750px;
-  border: solid 2px blue;
+  width: 710px;
+  height: auto;
+  padding-left: 20px;
+  border: solid 20px #f2f2f2;
+  border-radius: 20px;
+  background-color: #f2f2f2;
 }
-.section2 img {
-  max-width: 15%;
-}
-.hebergements {
+.lodging_card {
   display: flex;
   flex-wrap: wrap;
-  width: 730px;
-  height: 270px;
-  justify-content: space-between;
-  border: solid 2px blue;
+  width: 750px;
 }
-.section3 {
+.lodging_card figure {
+  width: 200px;
+  height: 160px;
+  margin-left: auto;
+  border: 3px solid white;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 3px 3px 3px#f2f2f2;
+}
+.lodging_card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 3px 3px 3px#f2f2f2;
+  object-fit: cover;
+}
+.lodging_card figcaption {
+  font-size: 0.85em;
+  text-align: left;
+  margin-top: -10px;
+  margin-left: 10px;
+  color: black;
+}
+.more h3 {
+  padding-top: 30px;
+}
+
+.most_pop {
+  width: 360px;
   display: flex;
   flex-direction: column;
-  width: 425px;
+  border: 20px solid #f2f2f2;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+.most_pop figure {
+  display: flex;
+  width: 350px;
+  height: 130px;
+  border: 3px solid white;
+  border-radius: 20px;
+  background-color: white;
   margin-left: auto;
-  border: solid 2px orange;
 }
-.section3 img {
-  max-width: 5%;
+.most_pop img {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
 }
+.most_pop figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85em;
+  text-align: left;
+  margin-left: 10px;
+}
+
 .titre_icone {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.section4 img {
-  max-width: 25%;
-}
-.activités {
+.activity {
+  width: 1200px;
+  height: 500px;
   display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.activity_cards,
+.left_3,
+.right_3 {
+  display: flex;
+}
+.left_2 {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.right_2 {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.activity_cards {
+  height: 450px;
+}
+.activity_cards figure {
+  width: 220px;
+  height: 400px;
+}
+.activity_cards img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 3px 3px 3px#f2f2f2;
+}
+.activity_cards figcaption {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 3px 3px 3px#f2f2f2;
+  margin-top: -4px;
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.pomegues figure {
+  height: 200px;
+}
+.frioul figure {
+  height: 100px;
+  padding-top: 7px;
+}
+.notre_dame figure {
+  height: 130px;
+}
+.longchamp figure {
+  height: 170px;
+  padding-top: 21px;
 }
 footer {
   display: flex;
   justify-content: space-between;
   height: 200px;
+  width: 1200px;
+  background-color: #f2f2f2;
 }
 footer a {
   color: black;
 }
 footer h2 {
   font-size: 0.9em;
+  padding-left: 10px;
 }
 footer ul {
   list-style-type: none;
@@ -200,4 +326,5 @@ footer ul {
 footer ul li {
   margin-left: -41px;
   margin-top: 15px;
+  padding-left: 10px;
 }
