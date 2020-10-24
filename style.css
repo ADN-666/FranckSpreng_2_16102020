@@ -9,11 +9,12 @@ body {
   margin: auto;
   font-family: "Raleway";
 }
+/*
 @media all and (max-width: 1200px) {
   body {
-    width: auto;
   }
 }
+*/
 input::placeholder {
   color: black;
 }
@@ -36,8 +37,21 @@ li {
 a {
   text-decoration: none;
 }
+.star_ico {
+  color: #0065fc;
+}
+.span_ico_star {
+  color: #f2f2f2;
+}
 header a {
   color: #0065fc;
+}
+header a:hover {
+  border-top: 3px solid #0065fc;
+  padding-top: 15px;
+}
+#activités {
+  color: black;
 }
 header {
   display: flex;
@@ -54,7 +68,6 @@ header li {
 .search {
   display: flex;
   flex-direction: column;
-  width: 850px;
 }
 .search h1 + p {
   margin-top: -10px;
@@ -94,57 +107,47 @@ header li {
   justify-content: left;
   align-items: baseline;
 }
-.filters p {
-  font-weight: bold;
-  font-size: 1em;
-}
-.bouton {
-  margin-top: 10px;
+.filters_input {
+  width: 800px; /* attention width 800px déclaré */
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 20px;
 }
-.bouton i {
-  border: 12px solid #deebff;
+.filters input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+.filters label:hover {
+  background-color: #deebff;
+}
+.filters_input label {
+  height: 2.4em;
+  border: 2px solid #f2f2f2;
+  border-left: none;
+  border-radius: 10px 20px 20px 10px;
+  background-color: transparent;
+  font-weight: bold;
+  padding-right: 30px;
+}
+.filters i {
+  border: 13px solid #deebff; /*penser a affiner la taille de la bordure pour ico billet */
   border-radius: 20px;
   background-color: #deebff;
   color: #0065fc;
-  position: relative;
-  left: 20px;
+  font-size: 1em;
+  margin-top: -2px;
+  margin-left: -18px;
 }
-.bouton input {
-  width: 200px;
-  height: 41px;
-  margin-left: 5px;
-  border: 2.5px solid #f2f2f2;
-  border-left-style: none;
-  border-radius: 0px 20px 20px 0px;
-  background-color: transparent;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  top: -1px;
-}
-.bt_eco {
-  display: flex;
-  width: 180px;
-}
-.bt_familial {
-  display: flex;
-  width: 150px;
-}
-.bt_romantique {
-  display: flex;
-  width: 180px;
-}
-.bt_animaux {
-  display: flex;
-  width: 220px;
+.span_filters {
+  padding-left: 10px;
 }
 .fa-child {
   width: 18px;
   text-align: center;
 }
 .info {
-  width: auto;
   margin-top: 10px;
 }
 .info p {
@@ -153,6 +156,7 @@ header li {
 }
 .info i {
   width: 16px;
+  padding: 0.6em;
   height: 17px;
   border: 2px solid #f2f2f2;
   border-radius: 20px;
@@ -160,9 +164,10 @@ header li {
   font-weight: bold;
   font-size: 0.9em;
   color: #0065fc;
+  margin-right: 15px;
 }
 .section_lodging {
-  width: 1200px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -171,31 +176,42 @@ header li {
   display: flex;
   flex-direction: column;
   width: 710px;
-  height: auto;
+  justify-content: space-between;
   padding-left: 20px;
   border: solid 20px #f2f2f2;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
 .lodging_card {
+  width: 750px;
   display: flex;
   flex-wrap: wrap;
-  width: 750px;
+}
+.cannebiere,
+.port,
+.mouettes,
+.mer,
+.panier,
+.amina {
+  width: 200px;
+  margin: auto;
+  padding-right: 48px;
+  padding-top: 40px;
+  margin-top: 20px;
 }
 .lodging_card figure {
   width: 200px;
   height: 160px;
-  margin-left: auto;
+  margin: auto;
   border: 3px solid white;
   border-radius: 20px;
   background-color: white;
-  box-shadow: 3px 3px 3px#f2f2f2;
+  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
 }
 .lodging_card img {
   width: 100%;
   height: 50%;
   border-radius: 20px 20px 0px 0px;
-  box-shadow: 3px 3px 3px#f2f2f2;
   object-fit: cover;
 }
 .lodging_card figcaption {
@@ -205,10 +221,12 @@ header li {
   margin-left: 10px;
   color: black;
 }
-.more h3 {
-  padding-top: 30px;
+#more a {
+  color: black;
 }
-
+#more {
+  padding-top: 20px;
+}
 .most_pop {
   width: 360px;
   display: flex;
@@ -224,6 +242,7 @@ header li {
   border: 3px solid white;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
   margin-left: auto;
 }
 .most_pop img {
@@ -238,52 +257,59 @@ header li {
   font-size: 0.85em;
   text-align: left;
   margin-left: 10px;
+  color: black;
 }
-
 .titre_icone {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .activity {
-  width: 1200px;
-  height: 500px;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-}
-.activity_cards,
-.left_3,
-.right_3 {
-  display: flex;
-}
-.left_2 {
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-}
-.right_2 {
-  height: 450px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 40px;
 }
 .activity_cards {
-  height: 450px;
+  display: flex;
+  justify-content: space-between;
 }
-.activity_cards figure {
-  width: 220px;
+.left_3 {
+  width: 550px;
   height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.right_3 {
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.left_2 {
+  width: auto;
+  height: 378px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right_2 {
+  height: 378px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .activity_cards img {
   width: 100%;
   height: 80%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-  box-shadow: 3px 3px 3px#f2f2f2;
+  box-shadow: 3px 0px 5px grey, -3px -3px 5px grey;
 }
 .activity_cards figcaption {
   border-radius: 0 0 20px 20px;
-  box-shadow: 3px 3px 3px#f2f2f2;
+  box-shadow: 3px 3px 5px grey, -3px 0px 5px grey;
   margin-top: -4px;
   font-size: 0.8em;
   padding-top: 10px;
@@ -291,40 +317,59 @@ header li {
   font-weight: bold;
   padding-bottom: 5px;
 }
+.vieux_port figure,
+.calanques figure {
+  margin: auto;
+  width: 220px;
+  height: 378px;
+}
+.vieux_port img,
+.calanques img {
+  width: 100%;
+  height: 85%;
+}
 .pomegues figure {
-  height: 200px;
+  margin: auto;
+  width: 220px;
+  height: 180px;
 }
 .frioul figure {
+  margin: auto;
+  padding-bottom: 38px;
+  width: 220px;
   height: 100px;
-  padding-top: 7px;
 }
 .notre_dame figure {
+  margin: auto;
+  width: 220px;
   height: 130px;
 }
 .longchamp figure {
+  margin: auto;
+  width: 220px;
   height: 170px;
-  padding-top: 21px;
+  padding-bottom: 24px;
 }
 footer {
-  display: flex;
-  justify-content: space-between;
-  height: 200px;
-  width: 1200px;
+  margin-left: -100px;
   background-color: #f2f2f2;
+  width: 1400px;
+}
+.liste {
+  display: flex;
+  width: 1100px;
+  justify-content: space-between;
+  padding-left: 65px;
 }
 footer a {
   color: black;
 }
 footer h2 {
   font-size: 0.9em;
-  padding-left: 10px;
 }
 footer ul {
   list-style-type: none;
-  width: 200px;
 }
 footer ul li {
-  margin-left: -41px;
   margin-top: 15px;
-  padding-left: 10px;
 }
