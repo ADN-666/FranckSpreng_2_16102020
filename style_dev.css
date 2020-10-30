@@ -5,140 +5,53 @@
   font-style: normal;
 }
 body {
-  width: 1200px;
+  width: 1340px;
   margin: auto;
   font-family: "Raleway";
 }
-/*
-@media all and (max-width: 1200px) {
-  body {
-  }
-}
-*/
 input::placeholder {
   color: black;
 }
 h1 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 h2 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 h3 {
-  font-size: 1em;
+  font-size: 0.8rem;
   color: black;
 }
 p {
-  font-size: 0.8em;
+  font-size: 0.6rem;
+  color: black;
+}
+.search h1 + p {
+  font-size: 0.8rem;
 }
 li {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 a {
   text-decoration: none;
 }
-.star_ico {
+.header_nav a {
   color: #0065fc;
+}
+#activites {
+  color: black;
+}
+.lodging_star_ico,
+.most_star_ico {
+  color: #0065fc;
+  font-size: 0.5rem;
 }
 .span_ico_star {
   color: #f2f2f2;
+  font-size: 0.5rem;
 }
-header a {
-  color: #0065fc;
-}
-header a:hover {
-  border-top: 3px solid #0065fc;
-  padding-top: 15px;
-}
-#activités {
-  color: black;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-}
-header ul {
-  display: flex;
-  list-style-type: none;
-  margin-top: 20px;
-}
-header li {
-  margin-left: 60px;
-}
-.search {
-  display: flex;
-  flex-direction: column;
-}
-.search h1 + p {
-  margin-top: -10px;
-}
-.form_search {
-  margin-top: 10px;
-}
-#submit {
-  border: 13px solid #0065fc;
-  border-radius: 0px 15px 15px 0px;
-  background-color: #0065fc;
-  color: white;
-  position: relative;
-  left: -6px;
-  top: -2px;
-}
-#ville {
-  width: 175px;
-  height: 41px;
-  border-style: none;
-  border-top: 2px solid #f2f2f2;
-  border-bottom: 2px solid #f2f2f2;
-  padding-left: 10px;
-  position: relative;
-  left: -3px;
-  top: -2px;
-  font-weight: bold;
-}
-.fa-map-marker-alt {
-  border: 15px solid #f2f2f2;
-  border-radius: 15px 0px 0px 15px;
-  background-color: #f2f2f2;
-}
-.filters {
-  margin-top: 15px;
-  display: flex;
-  justify-content: left;
-  align-items: baseline;
-}
-.filters_input {
-  width: 800px; /* attention width 800px déclaré */
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-left: 20px;
-}
-.filters input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-}
-.filters label:hover {
-  background-color: #deebff;
-}
-.filters_input label {
-  height: 2.4em;
-  border: 2px solid #f2f2f2;
-  border-left: none;
-  border-radius: 10px 20px 20px 10px;
-  background-color: transparent;
-  font-weight: bold;
-  padding-right: 30px;
-}
-.filters i {
-  border: 13px solid #deebff; /*penser a affiner la taille de la bordure pour ico billet */
-  border-radius: 20px;
-  background-color: #deebff;
-  color: #0065fc;
-  font-size: 1em;
-  margin-top: -2px;
-  margin-left: -18px;
+.filters h3 {
+  font-size: 1rem;
 }
 .span_filters {
   padding-left: 10px;
@@ -166,43 +79,117 @@ header li {
   color: #0065fc;
   margin-right: 15px;
 }
+.filters i {
+  border: 13px solid #deebff; /*penser a affiner la taille de la bordure pour ico billet */
+  border-radius: 20px;
+  background-color: #deebff;
+  color: #0065fc;
+  font-size: 1em;
+  margin-top: -2px;
+  margin-left: -18px;
+}
+
+.header_nav a:hover {
+  border-top: 0.16rem solid #0065fc;
+  padding-top: 0.5rem;
+}
+.header_nav ul {
+  display: flex;
+  list-style-type: none;
+}
+.header_nav li {
+  margin-left: 4rem;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+}
+.search h1 + p {
+  margin-top: -10px;
+}
+.form_search {
+  margin-top: 10px;
+}
+#submit {
+  border: 0.9rem solid #0065fc;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #0065fc;
+  color: white;
+  position: relative;
+  left: -7px;
+  top: -2px;
+}
+#ville {
+  width: 175px;
+  height: 41px;
+  border-style: none;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  padding-left: 10px;
+  position: relative;
+  left: -4px;
+  top: -2px;
+  font-weight: bold;
+}
+.fa-map-marker-alt {
+  border: 0.96rem solid #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #f2f2f2;
+}
+.filters {
+  margin-top: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+.filters input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  margin-right: 2rem;
+}
+.filters label:hover {
+  background-color: #deebff;
+}
+.filters label {
+  height: 2.4em;
+  border: 2px solid #f2f2f2;
+  border-left: none;
+  border-radius: 10px 20px 20px 10px;
+  background-color: transparent;
+  font-weight: bold;
+  padding-right: 30px;
+}
 .section_lodging {
+  box-sizing: border-box;
+  width: 100%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-
 .lodging {
   display: flex;
   flex-direction: column;
-  width: 710px;
   justify-content: space-between;
-  padding-left: 20px;
+  width: 65%;
   border: solid 20px #f2f2f2;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
 .lodging_card {
-  width: 750px;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-.cannebiere,
-.port,
-.mouettes,
-.mer,
-.panier,
-.amina {
-  width: 200px;
-  margin: auto;
-  padding-right: 48px;
-  padding-top: 40px;
-  margin-top: 20px;
+.lodging_card div {
+  width: 30%;
+  height: 40%;
 }
 .lodging_card figure {
-  width: 200px;
-  height: 160px;
   margin: auto;
+  width: 100%;
+  height: 100%;
   border: 3px solid white;
   border-radius: 20px;
   background-color: white;
@@ -210,43 +197,50 @@ header li {
 }
 .lodging_card img {
   width: 100%;
-  height: 50%;
+  height: 65%;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
 .lodging_card figcaption {
-  font-size: 0.85em;
-  text-align: left;
+  height: 30%;
   margin-top: -10px;
   margin-left: 10px;
-  color: black;
+}
+.lodging_nuit {
+  margin-top: -10px;
+}
+.most_nuit {
+  margin-top: -10px;
 }
 #more a {
   color: black;
 }
-#more {
-  padding-top: 20px;
-}
 .most_pop {
-  width: 360px;
+  width: 25%;
   display: flex;
   flex-direction: column;
   border: 20px solid #f2f2f2;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
+.soleil_matin,
+.coeur_eau,
+.bleu_blanc {
+  height: 25%;
+  margin-bottom: auto;
+}
 .most_pop figure {
   display: flex;
-  width: 350px;
-  height: 130px;
+  width: 100%;
+  height: 95%;
   border: 3px solid white;
   border-radius: 20px;
   background-color: white;
   box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
-  margin-left: auto;
+  margin: auto;
 }
 .most_pop img {
-  width: 50%;
+  width: 40%;
   height: 100%;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
@@ -259,50 +253,57 @@ header li {
   margin-left: 10px;
   color: black;
 }
+.most_star_ico {
+  padding-top: 55px;
+}
+.coeur_eau .most_star_ico {
+  padding-top: 40px;
+}
 .titre_icone {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .activity {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
+
 .activity_cards {
+  margin: 0%;
+  width: 100%;
+  height: 380px;
   display: flex;
   justify-content: space-between;
 }
-.left_3 {
-  width: 550px;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.vieux_port,
+.calanques {
+  width: 23%;
+  margin-right: 0%;
 }
-.right_3 {
-  width: 550px;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
-}
-.left_2 {
-  width: auto;
-  height: 378px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+.left_2,
 .right_2 {
-  height: 378px;
+  margin-right: 0%;
+  width: 23%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+.frioul,
+.longchamp {
+  margin: 0%;
+  height: 50%;
+}
+.activity_cards figure {
+  margin: 0%;
+  width: 100%;
+  height: 90%;
 }
 .activity_cards img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
   box-shadow: 3px 0px 5px grey, -3px -3px 5px grey;
@@ -310,56 +311,63 @@ header li {
 .activity_cards figcaption {
   border-radius: 0 0 20px 20px;
   box-shadow: 3px 3px 5px grey, -3px 0px 5px grey;
-  margin-top: -4px;
   font-size: 0.8em;
-  padding-top: 10px;
   padding-left: 10px;
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-top: -4px;
 }
-.vieux_port figure,
-.calanques figure {
-  margin: auto;
-  width: 220px;
-  height: 378px;
-}
-.vieux_port img,
-.calanques img {
-  width: 100%;
-  height: 85%;
+.pomegues {
+  margin: 0%;
+  height: 60%;
 }
 .pomegues figure {
-  margin: auto;
-  width: 220px;
-  height: 180px;
+  height: 90%;
 }
 .frioul figure {
-  margin: auto;
-  padding-bottom: 38px;
-  width: 220px;
-  height: 100px;
+  height: 54%;
+  margin-top: 14%;
+}
+.notre_dame {
+  margin: 0%;
+  height: 42%;
 }
 .notre_dame figure {
-  margin: auto;
-  width: 220px;
-  height: 130px;
+  height: 100%;
 }
 .longchamp figure {
-  margin: auto;
-  width: 220px;
-  height: 170px;
-  padding-bottom: 24px;
+  height: 100%;
+  margin-top: 17%;
 }
+.pomegues img {
+  height: 85%;
+}
+.frioul img {
+  height: 80%;
+}
+.notre_dame img {
+  height: 70%;
+}
+.longchamp img {
+  height: 75%;
+}
+.activity h3 {
+  padding-bottom: 15px;
+}
+
 footer {
-  margin-left: -100px;
   background-color: #f2f2f2;
-  width: 1400px;
+  width: 1420px;
+  position: relative;
+  left: -200px;
 }
-.liste {
+footer nav {
   display: flex;
-  width: 1100px;
-  justify-content: space-between;
-  padding-left: 65px;
+  justify-content: left;
+  margin-left: 160px;
+}
+footer ul {
+  margin-right: 150px;
 }
 footer a {
   color: black;
@@ -372,4 +380,29 @@ footer ul {
 }
 footer ul li {
   margin-top: 15px;
+}
+@media screen and (min-width: 1023px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    min-width: 1023px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1023px;
+  }
+}
+@media all and (max-width: 767px) {
+  body {
+    max-width: 766px;
+  }
+}
+@media screen and (max-width: 374px) {
+  body {
+    max-width: 373px;
+  }
 }
