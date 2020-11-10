@@ -1,3 +1,4 @@
+/* Parametres généraux */
 @font-face {
   font-family: "Raleway";
   src: url("Font_Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
@@ -15,21 +16,24 @@ main {
   width: 90%;
 }
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 h2 {
   font-size: 1.4rem;
 }
 h3 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: black;
 }
 p {
   font-size: 0.63rem;
   color: black;
 }
+.search p {
+  font-size: 1rem;
+}
 .search h1 + p {
-  font-size: 0.8rem;
+  margin-top: -0.63rem;
 }
 li {
   font-size: 1rem;
@@ -39,8 +43,27 @@ a {
 }
 .span_ico_star {
   color: #f2f2f2;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
+body figure:hover {
+  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+}
+img {
+  object-fit: cover;
+}
+figure {
+  box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
+}
+.lodging_card figure,
+.activity_cards figure {
+  border-radius: 20px;
+}
+.lodging_card figure,
+.most_pop figure {
+  border: 3px solid white;
+  background-color: white;
+}
+/* Parametres Header */
 header {
   box-sizing: border-box;
   width: 90%;
@@ -63,7 +86,7 @@ header a {
   padding-top: 0.5rem;
 }
 #inscrire:hover {
-  border-top: 0;
+  border: 0;
 }
 .header_nav {
   width: 30%;
@@ -79,16 +102,15 @@ header a {
   width: 50%;
   text-align: center;
 }
+/* Parametres section search */
 .search {
   display: flex;
   flex-direction: column;
 }
-.search h1 + p {
-  margin-top: -0.63rem;
-}
 .form_search {
   margin-top: 0.63rem;
 }
+/* Parametres barre de recherche */
 .submit {
   border: 0.9rem solid #0065fc;
   border-radius: 0px 15px 15px 0px;
@@ -98,6 +120,7 @@ header a {
   left: -0.44rem;
   top: -0.13rem;
 }
+/* permet de cacher l'icone recherche jusqu'au mode smartphone  */
 .fa-search {
   visibility: hidden;
 }
@@ -123,6 +146,7 @@ input::placeholder {
   height: 1.1rem;
   padding-top: 0.13rem;
 }
+/* Parametres des filtres */
 .span_filters {
   padding-left: 0.63rem;
 }
@@ -140,13 +164,22 @@ input::placeholder {
   justify-content: left;
   align-items: center;
 }
+.filters i {
+  border: 13px solid #deebff;
+  border-radius: 20px;
+  background-color: #deebff;
+  color: #0065fc;
+  font-size: 1em;
+  margin-top: -0.13rem;
+  margin-left: -0.38rem;
+}
 .filters input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   margin-right: 3rem;
-  visibility: hidden;
+  visibility: hidden; /* important pour case à cocher sur iphone et ipad */
 }
 .filters_input {
   display: flex;
@@ -163,9 +196,11 @@ input::placeholder {
   font-weight: bold;
   padding-right: 0.94rem;
 }
+/* Parametres bloc logo info + texte */
 .info {
   display: flex;
   margin-top: 0.63rem;
+  align-items: center;
 }
 .info p {
   font-weight: bold;
@@ -173,36 +208,26 @@ input::placeholder {
 }
 .info i {
   width: 1rem;
-  padding: 0.63em;
-  height: 1rem;
+  padding: 0.5em;
+  margin-right: 1rem;
   border: 2px solid #f2f2f2;
   border-radius: 20px;
   text-align: center;
-  font-weight: bold;
   font-size: 0.9em;
   color: #0065fc;
-  margin-right: 1rem;
 }
-.filters i {
-  border: 13px solid #deebff;
-  border-radius: 20px;
-  background-color: #deebff;
-  color: #0065fc;
-  font-size: 1em;
-  margin-top: -0.13rem;
-  margin-left: -0.38rem;
-}
+/* Parametres du bloc section Lodging + most_pop */
 .section_lodging {
   width: 100%;
-  height: auto;
   margin-top: 0.63rem;
   display: flex;
   justify-content: space-between;
 }
+/* Parametres section Lodging */
 .lodging {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 65%;
   border: solid 20px #f2f2f2;
   border-radius: 20px;
@@ -213,6 +238,7 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-content: space-around;
 }
 .cannebiere,
 .port,
@@ -227,21 +253,14 @@ input::placeholder {
   margin: auto;
   width: 100%;
   height: 100%;
-  border: 3px solid white;
-  border-radius: 20px;
-  background-color: white;
 }
-.lodging_card figure:hover {
-  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
-}
+
 .lodging_card img {
   width: 100%;
   height: 65%;
   border-radius: 20px 20px 0px 0px;
-  object-fit: cover;
 }
 .lodging_card figcaption {
-  height: auto;
   margin-top: -0.63rem;
   margin-left: 0.63rem;
 }
@@ -251,14 +270,10 @@ input::placeholder {
 .lodging_star_ico,
 .most_star_ico {
   color: #0065fc;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+  margin-top: -0.5rem;
 }
-.most_nuit {
-  margin-top: -0.63rem;
-}
-#more a {
-  color: black;
-}
+/* Parametres section most_pop */
 .most_pop {
   width: 25%;
   display: flex;
@@ -266,6 +281,12 @@ input::placeholder {
   border: 20px solid #f2f2f2;
   border-radius: 20px;
   background-color: #f2f2f2;
+}
+.most_nuit {
+  margin-top: -0.63rem;
+}
+#more a {
+  color: black;
 }
 .soleil_matin,
 .coeur_eau,
@@ -277,27 +298,21 @@ input::placeholder {
   display: flex;
   width: 100%;
   height: 95%;
-  border: 3px solid white;
   border-radius: 20px;
-  background-color: white;
   margin: auto;
+  box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
 }
-.most_pop figure:hover {
-  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
-}
+
 .most_pop img {
   width: 40%;
   height: 100%;
   border-radius: 20px 0 0 20px;
-  object-fit: cover;
 }
 .most_pop figcaption {
   display: flex;
   flex-direction: column;
-  font-size: 0.85em;
   text-align: left;
   margin-left: 0.63rem;
-  color: black;
 }
 .most_star_ico {
   padding-top: 2.19rem;
@@ -307,6 +322,7 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
 }
+/* Parametre section activity */
 .activity {
   width: 100%;
   display: flex;
@@ -315,7 +331,6 @@ input::placeholder {
   margin-bottom: 3.75rem;
 }
 .activity_cards {
-  margin: 0;
   width: 100%;
   height: 25rem;
   display: flex;
@@ -324,47 +339,37 @@ input::placeholder {
 .vieux_port,
 .calanques {
   width: 23%;
-  margin: 0;
 }
 .left_2,
 .right_2 {
-  margin: 0;
   width: 23%;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
-  height: 25rem;
 }
 .activity_cards figure {
-  margin: 0;
+  margin: auto;
   width: 100%;
   height: 100%;
 }
 .activity_cards img {
   width: 100%;
-  height: 90%;
-  object-fit: cover;
+  height: 91%;
   border-radius: 20px 20px 0 0;
-  box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
-}
-.activity_cards img:hover {
-  box-shadow: 3px 0px 5px grey, -3px -3px 5px grey;
 }
 .activity_cards figcaption {
+  border: 3px solid white;
   border-radius: 0 0 20px 20px;
-  font-size: 0.8em;
   padding-left: 0.63rem;
-  font-weight: bold;
-  padding-top: 0.31rem;
   margin-top: -0.31rem;
-  box-shadow: 3px 3px 5px #f2f2f2, -3px 0px 5px #f2f2f2;
-}
-.activity_cards figcaption:hover {
-  box-shadow: 3px 0px 5px grey, -3px -3px 5px grey;
+  box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
 }
 .activity h3 {
   margin: 0;
   padding-top: 0.06rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.94rem;
 }
 .pomegues {
   margin: 0;
@@ -374,19 +379,18 @@ input::placeholder {
   height: 100%;
 }
 .pomegues img {
-  height: 85%;
+  height: 82%;
 }
 .frioul {
   margin: 0;
   margin-top: 0;
-  height: 33%;
+  height: 40%;
 }
 .frioul figure {
   height: 100%;
-  margin-top: -0.88rem;
 }
 .frioul img {
-  height: 80%;
+  height: 78%;
 }
 .notre_dame {
   margin: 0;
@@ -396,7 +400,7 @@ input::placeholder {
   height: 100%;
 }
 .notre_dame img {
-  height: 70%;
+  height: 78%;
 }
 .longchamp {
   margin: 0;
@@ -404,14 +408,11 @@ input::placeholder {
 }
 .longchamp figure {
   height: 100%;
-  margin-top: 0.31rem;
 }
 .longchamp img {
-  height: 75%;
+  height: 80%;
 }
-.activity h3 {
-  padding-bottom: 0.94rem;
-}
+/* Parametres footer */
 footer {
   background-color: #f2f2f2;
   width: 100%;
@@ -437,6 +438,7 @@ footer ul {
 footer ul li {
   margin-top: 0.94rem;
 }
+/* Parametres responsive petits ecrans et tablettes */
 @media screen and (min-width: 48rem) and (max-width: 64rem) {
   .filters {
     flex-direction: column;
@@ -461,14 +463,15 @@ footer ul li {
     width: 95%;
     height: 31.25rem;
   }
+  .most_pop figure {
+    width: 70%;
+  }
   .most_pop h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-top: auto;
   }
   .most_pop p {
     font-size: 0.8rem;
-  }
-  .most_pop figure {
-    width: 70%;
   }
   .most_star_ico {
     font-size: 0.7rem;
@@ -479,24 +482,33 @@ footer ul li {
     height: 35.63rem;
     margin-top: 1.25rem;
   }
-  .lodging h3 {
-    font-size: 0.6rem;
+  .lodging_card h3 {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  .lodging_star_ico {
+    padding-top: 0.5rem;
   }
   .activity {
     height: 31.25rem;
     margin-bottom: 1.26rem;
   }
   .activity_cards {
-    height: 70%;
+    height: 80%;
   }
   .left_2,
-  .right_2 {
+  .right_2,
+  .vieux_port,
+  .calanques {
     height: 100%;
   }
   .activity h3 {
     font-size: 0.7rem;
+    padding-top: 0.2rem;
+    margin-left: -0.5rem;
   }
 }
+/* Parametres responsive smartphone */
 @media screen and (max-width: 48rem) {
   header {
     width: 100%;
@@ -528,9 +540,11 @@ footer ul li {
     font-size: 1.2rem;
     font-weight: bold;
   }
+  /* important permet de faire disparaitre le bouton rechercher */
   #bt_search {
     display: none;
   }
+  /* important rend visible le bouton loupe */
   .fa-search {
     visibility: visible;
   }
@@ -580,38 +594,47 @@ footer ul li {
   .amina {
     width: 100%;
     height: 12.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .lodging_card figure {
+    height: 100%;
   }
   .lodging_card img {
-    height: 80%;
+    height: 66%;
   }
   .lodging_card figcaption {
-    width: 100%;
+    height: 40%;
     margin-top: -1rem;
     margin-left: 0;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 3px 3px 5px #f2f2f2, -3px 0px 5px #f2f2f2;
   }
   .lodging_card h3 {
     padding-left: 1rem;
+    font-size: 1.1rem;
+    margin-top: auto;
+    padding-top: 1rem;
   }
   .lodging_nuit {
     padding-left: 1rem;
     margin-top: -0.8rem;
+    font-size: 0.8rem;
   }
   .lodging_star_ico {
     padding-left: 1rem;
     margin-top: -0.5rem;
+    font-size: 0.8rem;
+  }
+  .span_ico_star {
+    font-size: 0.8rem;
   }
   .most_pop {
     width: 100%;
     height: 31.25rem;
     border-radius: 0;
-    border: 20px solid #f2f2f2;
     margin-left: -1.25rem;
   }
   .most_pop h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-top: auto;
   }
   .most_pop p {
     font-size: 0.8rem;
@@ -620,46 +643,50 @@ footer ul li {
     width: 100%;
   }
   .most_star_ico {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding-top: 0.63rem;
   }
   .activity_cards {
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 81.25rem;
+    height: 85rem;
   }
-  .activity figure {
-    margin: 0;
-    padding: 0;
+  .activity_cards figure {
+    height: 95%;
+  }
+  .activity_cards img {
+    height: 73%;
+  }
+  .activity_cards figcaption {
+    padding-top: 0.8rem;
+    margin-top: -0.5rem;
   }
   .vieux_port,
   .calanques {
     width: 100%;
-    height: 9.38rem;
+    height: 12.5rem;
   }
   .left_2 {
     width: 100%;
-    height: 23.75rem;
+    height: 27rem;
   }
   .right_2 {
     width: 100%;
-    height: 23.75rem;
+    height: 27rem;
   }
   .pomegues,
   .frioul {
     width: 100%;
-    height: 9.38rem;
+    height: 12.5rem;
   }
   .notre_dame,
   .longchamp {
     width: 100%;
-    height: 9.38rem;
+    height: 12.5rem;
   }
-  .activity_cards img {
-    height: 100%;
-  }
-  .activity h3 {
-    font-size: 0.7rem;
+  .activity_cards h3 {
+    font-size: 1rem;
   }
   footer nav {
     flex-direction: column;
