@@ -6,67 +6,40 @@
   font-style: normal;
 }
 body {
-  font-family: "Raleway";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: "Raleway", "Sans serif";
   margin: 0;
 }
 main {
-  width: 90%;
-}
-h1 {
-  font-size: 1.5rem;
-}
-h2 {
-  font-size: 1.4rem;
-}
-h3 {
-  font-size: 0.9rem;
-  color: black;
-}
-p {
-  font-size: 0.63rem;
-  color: black;
-}
-.search p {
-  font-size: 1rem;
+  width: 95%;
+  margin: auto;
 }
 .search h1 + p {
   margin-top: -0.63rem;
 }
-li {
-  font-size: 1rem;
-}
 a {
   text-decoration: none;
+  color: black;
 }
 .span_ico_star {
   color: #f2f2f2;
-  font-size: 0.7rem;
 }
-body figure:hover {
+.lodging_card_star_ico,
+.most_pop_card_star_ico {
+  color: #0065fc;
+  font-size: 0.8rem;
+}
+article:hover {
   box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
 }
 img {
   object-fit: cover;
 }
-figure {
-  box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
-}
-.lodging_card figure,
-.activity_cards figure {
-  border-radius: 20px;
-}
-.lodging_card figure,
-.most_pop figure {
-  border: 3px solid white;
-  background-color: white;
-}
+
 /* Parametres Header */
 header {
   box-sizing: border-box;
-  width: 90%;
+  width: 95%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,7 +128,6 @@ input::placeholder {
   text-align: center;
 }
 .filters h3 {
-  font-size: 1rem;
   margin-right: 1rem;
 }
 .filters {
@@ -183,6 +155,8 @@ input::placeholder {
 }
 .filters_input {
   display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 .filters label:hover {
   background-color: #deebff;
@@ -204,7 +178,6 @@ input::placeholder {
 }
 .info p {
   font-weight: bold;
-  font-size: 0.9em;
 }
 .info i {
   width: 1rem;
@@ -218,110 +191,122 @@ input::placeholder {
 }
 /* Parametres du bloc section Lodging + most_pop */
 .section_lodging {
-  width: 100%;
   margin-top: 0.63rem;
   display: flex;
   justify-content: space-between;
 }
 /* Parametres section Lodging */
 .lodging {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 65%;
+  justify-content: space-between;
+  width: 67%;
   border: solid 20px #f2f2f2;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
 .lodging_card {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-content: space-around;
 }
-.cannebiere,
-.port,
-.mouettes,
-.mer,
-.panier,
-.amina {
-  width: 30%;
-  height: 40%;
+.lodging_card article {
+  width: 31%;
+  margin: 0;
+  height: 35%;
+  border: 4px solid white;
+  border-radius: 20px;
+  background-color: white;
 }
 .lodging_card figure {
   margin: auto;
-  width: 100%;
-  height: 100%;
+  height: 60%;
+  border-radius: 20px 20px 0 0;
 }
-
 .lodging_card img {
   width: 100%;
-  height: 65%;
-  border-radius: 20px 20px 0px 0px;
+  height: 95%;
+  border-radius: 20px 20px 0 0;
 }
-.lodging_card figcaption {
-  margin-top: -0.63rem;
-  margin-left: 0.63rem;
+.lodging_card_legend {
+  height: 36%;
+  margin: 0;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
 }
-.lodging_nuit {
-  margin-top: -0.63rem;
+.lodging_card_titre {
+  margin: 0;
 }
-.lodging_star_ico,
-.most_star_ico {
-  color: #0065fc;
-  font-size: 0.7rem;
-  margin-top: -0.5rem;
+.lodging_card_nuit {
+  margin: 0;
 }
-/* Parametres section most_pop */
-.most_pop {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  border: 20px solid #f2f2f2;
-  border-radius: 20px;
-  background-color: #f2f2f2;
+.lodging_card_star_ico {
+  margin-top: 0.6rem;
 }
-.most_nuit {
-  margin-top: -0.63rem;
+.lodging_card_titre,
+.lodging_card_nuit,
+.lodging_card_star_ico {
+  margin-left: 0.5rem;
 }
 #more a {
   color: black;
 }
-.soleil_matin,
-.coeur_eau,
-.bleu_blanc {
-  height: 25%;
-  margin-bottom: auto;
-}
-.most_pop figure {
-  display: flex;
-  width: 100%;
-  height: 95%;
-  border-radius: 20px;
-  margin: auto;
-  box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
-}
-
-.most_pop img {
-  width: 40%;
-  height: 100%;
-  border-radius: 20px 0 0 20px;
-}
-.most_pop figcaption {
+/* Parametres section most_pop */
+.most_pop {
+  box-sizing: border-box;
+  width: 31%;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-left: 0.63rem;
-}
-.most_star_ico {
-  padding-top: 2.19rem;
+  justify-content: space-between;
+  border: 20px solid #f2f2f2;
+  border-radius: 20px;
+  background-color: #f2f2f2;
 }
 .titre_icone {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.most_pop article {
+  width: 100%;
+  height: 18%;
+  border: 4px solid white;
+  border-radius: 20px;
+  background-color: white;
+  margin: auto;
+}
+.most_pop figure {
+  float: left;
+  width: 40%;
+  height: 100%;
+  margin: 0;
+}
+
+.most_pop img {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+.most_pop_card_legend {
+  width: auto;
+  height: 100%;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  margin: 0;
+}
+.most_pop_card_titre {
+  margin: 0;
+}
+.most_pop_card_nuit {
+  margin: 0;
+}
+.most_pop_card_star_ico {
+  margin-top: 1.5rem;
+}
+
 /* Parametre section activity */
 .activity {
   width: 100%;
@@ -352,6 +337,11 @@ input::placeholder {
   margin: auto;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
+}
+.activity figure:hover {
+  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
 }
 .activity_cards img {
   width: 100%;
@@ -359,16 +349,14 @@ input::placeholder {
   border-radius: 20px 20px 0 0;
 }
 .activity_cards figcaption {
-  border: 3px solid white;
   border-radius: 0 0 20px 20px;
   padding-left: 0.63rem;
   margin-top: -0.31rem;
-  box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
 }
 .activity h3 {
   margin: 0;
-  padding-top: 0.06rem;
-  font-size: 0.9rem;
+  padding-top: 0.5rem;
+
   padding-bottom: 0.94rem;
 }
 .pomegues {
@@ -416,10 +404,11 @@ input::placeholder {
 footer {
   background-color: #f2f2f2;
   width: 100%;
+  margin: 0;
 }
 footer nav {
   display: flex;
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 footer ul {
@@ -428,9 +417,7 @@ footer ul {
 footer a {
   color: black;
 }
-footer h2 {
-  font-size: 0.9em;
-}
+
 footer ul {
   list-style-type: none;
   padding: 0;
@@ -438,8 +425,19 @@ footer ul {
 footer ul li {
   margin-top: 0.94rem;
 }
+@media screen and (min-width: 66.5rem) and (max-width: 76rem) {
+  .lodging_card h3 {
+    font-size: 1.03rem;
+  }
+  .most_pop_card h3 {
+    font-size: 1.03rem;
+  }
+  .activity_cards h3 {
+    font-size: 1.03rem;
+  }
+}
 /* Parametres responsive petits ecrans et tablettes */
-@media screen and (min-width: 48rem) and (max-width: 64rem) {
+@media screen and (min-width: 48rem) and (max-width: 66.5rem) {
   .filters {
     flex-direction: column;
     align-items: initial;
@@ -450,66 +448,57 @@ footer ul li {
     width: auto;
     justify-content: left;
   }
-  .filters label {
-    margin-bottom: 1rem;
-  }
-  .filters input {
-    margin-right: auto;
-  }
   .section_lodging {
     flex-direction: column-reverse;
   }
   .most_pop {
-    width: 95%;
-    height: 31.25rem;
+    width: auto;
+    height: 40rem;
+  }
+  .most_pop article {
+    height: 25%;
+    margin: auto;
   }
   .most_pop figure {
-    width: 70%;
+    height: 100%;
+    width: 60%;
   }
-  .most_pop h3 {
-    font-size: 1.3rem;
-    margin-top: auto;
-  }
-  .most_pop p {
-    font-size: 0.8rem;
-  }
-  .most_star_ico {
-    font-size: 0.7rem;
-    padding-top: 0.63rem;
+  .most_pop_legend {
+    height: 100%;
   }
   .lodging {
-    width: 95%;
-    height: 35.63rem;
+    width: 100%;
+    height: 45rem;
     margin-top: 1.25rem;
-  }
-  .lodging_card h3 {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  .lodging_star_ico {
-    padding-top: 0.5rem;
   }
   .activity {
     height: 31.25rem;
     margin-bottom: 1.26rem;
   }
-  .activity_cards {
-    height: 80%;
+  .activity_cards img {
+    height: 87%;
   }
-  .left_2,
-  .right_2,
-  .vieux_port,
-  .calanques {
-    height: 100%;
+  .pomegues img {
+    height: 75%;
   }
-  .activity h3 {
-    font-size: 0.7rem;
-    padding-top: 0.2rem;
-    margin-left: -0.5rem;
+  .frioul img {
+    height: 67%;
+  }
+  .notre_dame img {
+    height: 70%;
+  }
+  .longchamp img {
+    height: 70%;
+  }
+  .activity_cards h3 {
+    font-size: 1.1rem;
   }
 }
 /* Parametres responsive smartphone */
 @media screen and (max-width: 48rem) {
+  main {
+    width: 90%;
+  }
   header {
     width: 100%;
     flex-wrap: wrap;
@@ -536,9 +525,9 @@ footer ul li {
     border-top: 0;
   }
   #inscrire {
-    margin-right: auto;
     font-size: 1.2rem;
     font-weight: bold;
+    margin-right: auto;
   }
   /* important permet de faire disparaitre le bouton rechercher */
   #bt_search {
@@ -586,37 +575,26 @@ footer ul li {
     margin-top: 0.63rem;
     width: 100%;
   }
-  .cannebiere,
-  .port,
-  .mouettes,
-  .mer,
-  .panier,
-  .amina {
-    width: 100%;
-    height: 12.5rem;
+  .lodging_card article {
+    width: 95%;
+    height: 13rem;
     margin-bottom: 1.5rem;
+    border: 3px solid #f2f2f2;
   }
   .lodging_card figure {
-    height: 100%;
+    height: 65%;
+    box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
   }
   .lodging_card img {
-    height: 66%;
+    height: 95%;
   }
-  .lodging_card figcaption {
-    height: 40%;
-    margin-top: -1rem;
-    margin-left: 0;
+  .lodging_card_legend {
+    height: auto;
   }
-  .lodging_card h3 {
-    padding-left: 1rem;
-    font-size: 1.1rem;
-    margin-top: auto;
-    padding-top: 1rem;
-  }
+
   .lodging_nuit {
     padding-left: 1rem;
     margin-top: -0.8rem;
-    font-size: 0.8rem;
   }
   .lodging_star_ico {
     padding-left: 1rem;
@@ -627,29 +605,23 @@ footer ul li {
     font-size: 0.8rem;
   }
   .most_pop {
-    width: 100%;
-    height: 31.25rem;
+    width: 110%;
+    height: 40rem;
     border-radius: 0;
     margin-left: -1.25rem;
   }
-  .most_pop h3 {
-    font-size: 1.3rem;
-    margin-top: auto;
+  .most_pop article {
+    margin: 0;
+    width: 95%;
+    height: 9rem;
   }
-  .most_pop p {
-    font-size: 0.8rem;
-  }
-  .most_pop figure {
-    width: 100%;
-  }
-  .most_star_ico {
-    font-size: 0.8rem;
-    padding-top: 0.63rem;
+  .most_pop_card_star_ico {
+    margin-top: 3.5rem;
   }
   .activity_cards {
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
     height: 85rem;
   }
   .activity_cards figure {
@@ -685,10 +657,9 @@ footer ul li {
     width: 100%;
     height: 12.5rem;
   }
-  .activity_cards h3 {
-    font-size: 1rem;
-  }
+
   footer nav {
+    width: 90%;
     flex-direction: column;
   }
 }
