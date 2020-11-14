@@ -80,44 +80,45 @@ header a {
   display: flex;
   flex-direction: column;
 }
-.form_search {
-  margin-top: 0.63rem;
+form {
+  display: flex;
+  align-items: center;
 }
 /* Parametres barre de recherche */
-.submit {
-  border: 0.9rem solid #0065fc;
-  border-radius: 0px 15px 15px 0px;
-  background-color: #0065fc;
-  color: white;
-  position: relative;
-  left: -0.44rem;
-  top: -0.13rem;
-}
-/* permet de cacher l'icone recherche jusqu'au mode smartphone  */
-.fa-search {
-  visibility: hidden;
-}
-input::placeholder {
-  color: black;
+.fa-map-marker-alt {
+  border: solid #f2f2f2;
+  border-width: 1rem 1.3rem 1rem 1rem;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #f2f2f2;
+  height: 1rem;
+  padding-left: 0.5rem;
 }
 #ville {
   width: 10rem;
-  height: 2.93rem;
+  height: 3rem;
   border-style: none;
   border-top: 2px solid #f2f2f2;
   border-bottom: 2px solid #f2f2f2;
   padding-left: 0.63rem;
-  position: relative;
-  left: -0.25rem;
-  top: -0.13rem;
   font-weight: bold;
 }
-.fa-map-marker-alt {
-  border: 0.9rem solid #f2f2f2;
-  border-radius: 15px 0px 0px 15px;
-  background-color: #f2f2f2;
-  height: 1.1rem;
-  padding-top: 0.13rem;
+#ville:focus {
+  /* a voir si possible pour question d'accessibilité */
+  outline: none;
+}
+input::placeholder {
+  color: black;
+}
+
+.submit {
+  border: 0.93rem solid #0065fc;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #0065fc;
+  color: white;
+}
+/* permet de cacher l'icone recherche jusqu'au mode smartphone  */
+.fa-search {
+  visibility: hidden;
 }
 /* Parametres des filtres */
 .span_filters {
@@ -134,7 +135,7 @@ input::placeholder {
   margin-top: 0.94rem;
   display: flex;
   justify-content: left;
-  align-items: center;
+  align-items: baseline;
 }
 .filters i {
   border: 13px solid #deebff;
@@ -425,6 +426,17 @@ footer ul {
 footer ul li {
   margin-top: 0.94rem;
 }
+@media screen and (min-width: 106rem) {
+  body {
+    max-width: 1800px;
+    margin: 30px auto;
+    box-shadow: -5px -5px 5px #f2f2f2, 5px 5px 5px 5px black;
+    border-radius: 20px 20px 20px 20px;
+  }
+  footer {
+    border-radius: 0 0 20px 20px;
+  }
+}
 @media screen and (min-width: 66.5rem) and (max-width: 76rem) {
   .lodging_card h3 {
     font-size: 1.03rem;
@@ -537,8 +549,12 @@ footer ul li {
   .fa-search {
     visibility: visible;
   }
+  #ville {
+    width: 70%;
+  }
   .submit {
-    border: 0.94rem solid #0065fc;
+    border: solid #0065fc;
+    border-width: 15px 12px;
     border-radius: 15px 15px 15px 15px;
     background-color: #0065fc;
     color: white;
