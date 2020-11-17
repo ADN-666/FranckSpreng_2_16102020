@@ -212,6 +212,7 @@ input::placeholder {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   align-content: space-around;
 }
 .lodging_card article {
@@ -415,7 +416,7 @@ footer ul li {
     border-radius: 0 0 20px 20px;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1216px) {
+@media screen and (min-width: 1025px) and (max-width: 1216px) {
   .lodging_card h3 {
     font-size: 1.08rem;
   }
@@ -485,7 +486,7 @@ footer ul li {
   }
 }
 /* Parametres responsive smartphone */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   main {
     display: flex;
     flex-direction: column;
