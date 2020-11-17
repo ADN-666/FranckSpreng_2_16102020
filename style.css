@@ -216,7 +216,6 @@ input::placeholder {
 }
 .lodging_card article {
   width: 31%;
-  margin: 0;
   height: 35%;
   border: 4px solid white;
   border-radius: 20px;
@@ -234,7 +233,6 @@ input::placeholder {
 }
 .lodging_card_legend {
   height: 42%;
-  margin: 0;
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
@@ -243,7 +241,7 @@ input::placeholder {
   margin: 0;
 }
 .lodging_card_star_ico {
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
 }
 .lodging_card_titre,
 .lodging_card_nuit,
@@ -281,7 +279,7 @@ input::placeholder {
   float: left;
   width: 40%;
   height: 100%;
-  margin: 0;
+  margin: auto;
 }
 
 .most_pop img {
@@ -350,52 +348,34 @@ input::placeholder {
 }
 .activity_cards figcaption {
   border-radius: 0 0 20px 20px;
-  padding-left: 0.63rem;
+  padding-left: 0.5rem;
   margin-top: -0.31rem;
 }
 .activity h3 {
   margin: 0;
-  padding-top: 0.5rem;
-
-  padding-bottom: 0.94rem;
+  padding-top: 0.4rem;
 }
 .pomegues {
-  margin: 0;
   height: 50%;
-}
-.pomegues figure {
-  height: 100%;
 }
 .pomegues img {
   height: 82%;
 }
 .frioul {
-  margin: 0;
   margin-top: 0;
   height: 40%;
-}
-.frioul figure {
-  height: 100%;
 }
 .frioul img {
   height: 78%;
 }
 .notre_dame {
-  margin: 0;
   height: 42%;
-}
-.notre_dame figure {
-  height: 100%;
 }
 .notre_dame img {
   height: 78%;
 }
 .longchamp {
-  margin: 0;
   height: 45%;
-}
-.longchamp figure {
-  height: 100%;
 }
 .longchamp img {
   height: 80%;
@@ -417,7 +397,6 @@ footer ul {
 footer a {
   color: black;
 }
-
 footer ul {
   list-style-type: none;
   padding: 0;
@@ -425,7 +404,7 @@ footer ul {
 footer ul li {
   margin-top: 0.94rem;
 }
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1500px) {
   body {
     max-width: 1800px;
     margin: 30px auto;
@@ -438,7 +417,7 @@ footer ul li {
 }
 @media screen and (min-width: 1024px) and (max-width: 1216px) {
   .lodging_card h3 {
-    font-size: 1.03rem;
+    font-size: 1.08rem;
   }
   .most_pop_card_legend h3 {
     font-size: 1.03rem;
@@ -467,8 +446,8 @@ footer ul li {
     height: 40rem;
   }
   .most_pop article {
+    width: 80%;
     height: 25%;
-    margin: auto;
   }
   .most_pop figure {
     height: 100%;
@@ -481,6 +460,9 @@ footer ul li {
     width: 100%;
     height: 45rem;
     margin-top: 1.25rem;
+  }
+  .lodging_card article {
+    height: 40%;
   }
   .activity {
     height: 31.25rem;
@@ -501,14 +483,14 @@ footer ul li {
   .longchamp img {
     height: 70%;
   }
-  .activity_cards h3 {
-    font-size: 1.1rem;
-  }
 }
 /* Parametres responsive smartphone */
 @media screen and (max-width: 768px) {
   main {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
   header {
     width: 100%;
@@ -548,6 +530,9 @@ footer ul li {
   .fa-search {
     visibility: visible;
   }
+  .search {
+    width: 90%;
+  }
   #ville {
     width: 70%;
   }
@@ -575,10 +560,12 @@ footer ul li {
   }
   .section_lodging {
     flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
   }
   .lodging {
     margin-top: 0.63rem;
-    width: auto;
+    width: 90%;
     height: auto;
     background-color: initial;
     border: 0;
@@ -591,7 +578,7 @@ footer ul li {
     width: 100%;
   }
   .lodging_card article {
-    width: 95%;
+    width: 100%;
     height: 13rem;
     margin-bottom: 1.5rem;
     box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
@@ -620,24 +607,30 @@ footer ul li {
   .span_ico_star {
     font-size: 0.8rem;
   }
+  .titre_icone {
+    width: 100%;
+  }
   .most_pop {
-    width: 110%;
+    width: 100%;
     height: 40rem;
     border-radius: 0;
-    margin-left: -1.25rem;
+    align-items: center;
   }
   .most_pop article {
     margin: 0;
-    width: 95%;
+    width: 100%;
     height: 9rem;
   }
   .most_pop_card_star_ico {
     margin-top: 3.5rem;
   }
+  .activity {
+    width: 90%;
+  }
   .activity_cards {
     flex-direction: column;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
     height: 85rem;
   }
   .activity_cards figure {
