@@ -109,7 +109,6 @@ form {
 input::placeholder {
   color: black;
 }
-
 .submit {
   border: 0.93rem solid #0065fc;
   border-radius: 0px 15px 15px 0px;
@@ -128,7 +127,9 @@ input::placeholder {
   width: 1.1rem;
   text-align: center;
 }
-.filters h3 {
+.filters p {
+  font-size: 1.17rem;
+  font-weight: bold;
   margin-right: 1rem;
 }
 .filters {
@@ -232,14 +233,12 @@ input::placeholder {
   border-radius: 20px 20px 0 0;
 }
 .lodging_card_legend {
-  height: 36%;
+  height: 42%;
   margin: 0;
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-.lodging_card_titre {
-  margin: 0;
-}
+.lodging_card_titre,
 .lodging_card_nuit {
   margin: 0;
 }
@@ -249,7 +248,7 @@ input::placeholder {
 .lodging_card_titre,
 .lodging_card_nuit,
 .lodging_card_star_ico {
-  margin-left: 0.5rem;
+  margin-left: 0.1rem;
 }
 #more a {
   color: black;
@@ -426,7 +425,7 @@ footer ul {
 footer ul li {
   margin-top: 0.94rem;
 }
-@media screen and (min-width: 106rem) {
+@media screen and (min-width: 1700px) {
   body {
     max-width: 1800px;
     margin: 30px auto;
@@ -437,19 +436,19 @@ footer ul li {
     border-radius: 0 0 20px 20px;
   }
 }
-@media screen and (min-width: 66.5rem) and (max-width: 76rem) {
+@media screen and (min-width: 1024px) and (max-width: 1216px) {
   .lodging_card h3 {
     font-size: 1.03rem;
   }
-  .most_pop_card h3 {
+  .most_pop_card_legend h3 {
     font-size: 1.03rem;
   }
   .activity_cards h3 {
-    font-size: 1.03rem;
+    font-size: 1rem;
   }
 }
 /* Parametres responsive petits ecrans et tablettes */
-@media screen and (min-width: 48rem) and (max-width: 66.5rem) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .filters {
     flex-direction: column;
     align-items: initial;
@@ -507,7 +506,7 @@ footer ul li {
   }
 }
 /* Parametres responsive smartphone */
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   main {
     width: 90%;
   }
@@ -595,19 +594,20 @@ footer ul li {
     width: 95%;
     height: 13rem;
     margin-bottom: 1.5rem;
-    border: 3px solid #f2f2f2;
+    box-shadow: 3px 3px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
+  }
+  .lodging_card article:hover {
+    box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
   }
   .lodging_card figure {
     height: 65%;
-    box-shadow: 3px 0px 5px #f2f2f2, -3px -3px 5px #f2f2f2;
   }
   .lodging_card img {
     height: 95%;
   }
   .lodging_card_legend {
-    height: auto;
+    height: 37%;
   }
-
   .lodging_nuit {
     padding-left: 1rem;
     margin-top: -0.8rem;
