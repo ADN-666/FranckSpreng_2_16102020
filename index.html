@@ -48,42 +48,44 @@
             ><span id="bt_search">Rechercher</span>
           </button>
         </form>
-        <div class="filters">
-          <p>Filtres</p>
-          <div class="filters_input">
-            <label for="eco"
-              ><i class="fas fa-money-bill-wave"></i
-              ><span class="span_filters">Économique</span></label
-            ><input type="checkbox" name="eco" id="eco" value="Économique" />
-            <label for="famille"
-              ><i class="fas fa-child"></i
-              ><span class="span_filters">Familial</span></label
-            ><input
-              type="checkbox"
-              name="famille"
-              id="famille"
-              value="Familial"
-            />
-            <label for="romantique"
-              ><i class="fas fa-heart"></i
-              ><span class="span_filters">Romantique</span></label
-            ><input
-              type="checkbox"
-              name="romantique"
-              id="romantique"
-              value="Romantique"
-            />
-            <label for="animaux"
-              ><i class="fas fa-dog"></i
-              ><span class="span_filters">Animaux autorisés</span></label
-            ><input
-              type="checkbox"
-              name="animaux"
-              id="animaux"
-              value="Animaux autorisés"
-            />
+        <form class="form-filters" method="GET" action="index.html">
+          <div class="filters">
+            <p>Filtres</p>
+            <div class="filters_input">
+              <label for="eco"
+                ><i class="fas fa-money-bill-wave"></i
+                ><span class="span_filters">Économique</span></label
+              ><input type="checkbox" name="eco" id="eco" value="Économique" />
+              <label for="famille"
+                ><i class="fas fa-child"></i
+                ><span class="span_filters">Familial</span></label
+              ><input
+                type="checkbox"
+                name="famille"
+                id="famille"
+                value="Familial"
+              />
+              <label for="romantique"
+                ><i class="fas fa-heart"></i
+                ><span class="span_filters">Romantique</span></label
+              ><input
+                type="checkbox"
+                name="romantique"
+                id="romantique"
+                value="Romantique"
+              />
+              <label for="animaux"
+                ><i class="fas fa-dog"></i
+                ><span class="span_filters">Animaux autorisés</span></label
+              ><input
+                type="checkbox"
+                name="animaux"
+                id="animaux"
+                value="Animaux autorisés"
+              />
+            </div>
           </div>
-        </div>
+        </form>
         <div class="info">
           <i class="fas fa-info"></i>
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
