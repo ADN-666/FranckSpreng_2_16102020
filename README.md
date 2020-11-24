@@ -1,4 +1,4 @@
-<p align="center"><img src="./Pictures/logo/Reservia.svg" alt="Logo Reservia"></p> 
+<p align="center"><img src="./Pictures/logo/Reservia@3x.png" alt="Logo Reservia"></p> 
 
 <h2 align="center">Projet n° 2</h2>
 
