@@ -4,6 +4,7 @@
   src: url("Font_Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 body {
   font-family: "Raleway", "Sans serif";
